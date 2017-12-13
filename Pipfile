@@ -13,6 +13,7 @@ django-extensions = "*"
 ipython = "*"
 celery = {extras = ["redis"]}
 "psycopg2" = "*"
+raven = "*"
 
 
 [dev-packages]
