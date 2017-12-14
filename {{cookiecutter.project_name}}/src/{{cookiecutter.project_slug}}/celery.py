@@ -3,9 +3,9 @@ import os
 from celery import Celery
 
 # set the default Django settings module for the 'celery' program.
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', '{{project_slug}}.settings.local')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', '{{cookiecutter.project_slug}}.settings.local')
 
-app = Celery('{{project_slug}}')
+app = Celery('{{cookiecutter.project_slug}}')
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
