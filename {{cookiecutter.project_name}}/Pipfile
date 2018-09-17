@@ -1,23 +1,18 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
-django = "*"
+django = "~=2.1"
 django-environ = "*"
 django-extensions = "*"
 ipython = "*"
 celery = {extras = ["redis"]}
-"psycopg2" = "*"
 raven = "*"
-
+"psycopg2-binary" = "*"
 
 [dev-packages]
-
 django-debug-toolbar = "*"
 pytest = "*"
 pytest-cov = "*"
