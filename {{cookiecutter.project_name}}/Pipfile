@@ -11,9 +11,9 @@ ipython = "*"
 celery = {extras = ["redis"]}
 raven = "*"
 "psycopg2-binary" = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
-django-debug-toolbar = "*"
 pytest = "*"
 pytest-cov = "*"
 pytest-xdist = "*"

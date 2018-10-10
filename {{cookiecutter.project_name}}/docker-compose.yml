@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: {{cookiecutter.project_slug}}:latest
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      SECRET_KEY: "{{cookiecutter.project_slug}}+71mw&5azl+g#ms@waqog1qnsc_=0s+u^8#*$d5t6!^zov%w0{{cookiecutter.project_slug}}"
+      ALLOWED_HOSTS: localhost
+      DATABASE_URL: psql://postgres:@db/postgres
+      DJANGO_SETTINGS_MODULE: {{cookiecutter.project_slug}}.settings.production
+    volumes:
+      - ./assets:/app/assets
+
+  db:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:

@@ -32,6 +32,7 @@ RUN apt-get update && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
+RUN pip3 install gunicorn
 RUN pip3 install -r /tmp/requirements.txt
 
 COPY . /app
