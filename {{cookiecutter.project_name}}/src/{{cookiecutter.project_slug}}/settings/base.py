@@ -145,7 +145,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = str(ROOT_DIR.path('assets'))
 STATICFILES_DIRS = [
-    str((ROOT_DIR).path('static')),
+    str(ROOT_DIR.path('static')),
 ]
 
 # Media files
